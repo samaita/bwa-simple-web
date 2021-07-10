@@ -1,5 +1,7 @@
-deploy-web:
+build-web:
 	flutter build web
+
+deploy-web:
 	git checkout gh-pages
 	mv -v build/web/* ./ -f
 	rm -rf build/
