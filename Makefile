@@ -6,6 +6,7 @@ deploy-web:
 	rm -rf assets/
 	rm -rf icons/
 	mv -v build/web/* ./ -f
+	mv -v assets/* ./ -f
 	rm -rf build/
 	rm -rf ios/
 	rm -rf android/
