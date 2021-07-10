@@ -6,7 +6,11 @@ deploy-web:
 	rm -rf assets/
 	rm -rf icons/
 	mv -v build/web/* ./ -f
-	mv -v assets/* ./ -f
+	mkdir assets-backup
+	mv -v assets/* ./assets-backup
+	rm -rf assets/
+	mv -v assets-backup/* ./
+	rm -rf assets-backup/
 	rm -rf build/
 	rm -rf ios/
 	rm -rf android/
